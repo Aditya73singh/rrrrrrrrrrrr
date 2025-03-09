@@ -14,7 +14,7 @@ const GameSetup = ({ setGameId, setPlayer }) => {
     setLoading(true);
     try {
       // Create the game first.
-      const createRes = await fetch('https://raja-mantri-backend22.onrender.com/api/game/create', {
+      const createRes = await fetch('https://raja-mantri-backend2-1.onrender.com/api/game/create', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ gameName })
@@ -22,7 +22,7 @@ const GameSetup = ({ setGameId, setPlayer }) => {
       const gameData = await createRes.json();
 
       // Then join the game.
-      const joinRes = await fetch('https://raja-mantri-backend22.onrender.com/api/game/join', {
+      const joinRes = await fetch('https://raja-mantri-backend2-1.onrender.com/api/game/join', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ gameId: gameData._id, playerName })
