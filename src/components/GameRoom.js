@@ -7,7 +7,7 @@ const GameRoom = ({ gameId, player }) => {
   useEffect(() => {
     // Example polling: In production, consider using WebSockets for real-time game actions.
     const interval = setInterval(async () => {
-      const res = await fetch(`https://raja-mantri-backend22.onrender.com/api/game/${gameId}`);
+      const res = await fetch(`https://raja-mantri-backend2-1.onrender.com/api/game/${gameId}`);
       const data = await res.json();
       setGameState(data);
     }, 5000);
